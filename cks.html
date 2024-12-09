@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CKS - Certified Kubernetes Security Specialist">
+    <meta name="author" content="Your Name">
+    <title>CKS - Certified Kubernetes Security Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .toggle-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+            border: none;
+            cursor: pointer;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .toggle-btn:hover {
+            background-color: #45a049;
+        }
+        .content {
+            display: none;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            margin-top: 10px;
+            border-left: 4px solid #4CAF50;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CKS - Certified Kubernetes Security Specialist</h1>
+</header>
+
+<div class="container">
+    <h2>CKS Course Content</h2>
+
+    <button class="toggle-btn" onclick="toggleContent('content-1')">Introduction to Kubernetes Security</button>
+    <div id="content-1" class="content">
+        <p>This module covers the basics of Kubernetes security, including the security challenges associated with Kubernetes and how to mitigate common risks. Topics include securing Kubernetes clusters, managing vulnerabilities, and securing container runtimes.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-2')">Cluster Setup and Hardening</button>
+    <div id="content-2" class="content">
+        <p>In this module, you will learn how to securely set up a Kubernetes cluster. Topics include securing the API server, controlling access to the cluster, and configuring proper RBAC policies to limit the potential attack surface.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-3')">Pod Security</button>
+    <div id="content-3" class="content">
+        <p>This section covers pod security. You'll learn how to secure your pods by configuring security contexts, using security policies, and limiting the privileges of pods to minimize security risks.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-4')">Network Security</button>
+    <div id="content-4" class="content">
+        <p>Network security is crucial for securing Kubernetes applications. This module covers best practices for securing network communication in Kubernetes, including using Network Policies, securing communication between pods, and securing ingress and egress traffic.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-5')">Container Security</button>
+    <div id="content-5" class="content">
+        <p>Container security focuses on securing the container runtime. This module will help you learn how to secure the containers themselves by scanning images for vulnerabilities, implementing runtime security policies, and securing container registries.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-6')">Incident Response and Logging</button>
+    <div id="content-6" class="content">
+        <p>Learn how to effectively monitor, log, and respond to security incidents within your Kubernetes clusters. This module covers configuring logging and monitoring, setting up alerts, and responding to incidents.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleContent('content-7')">Compliance and Auditing</button>
+    <div id="content-7" class="content">
+        <p>This module teaches you about Kubernetes auditing and compliance practices. You'll learn about auditing Kubernetes activities, generating audit logs, and using tools to ensure compliance with security standards like CIS and NIST.</p>
+    </div>
+
+</div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+<a href="javascript:window.history.back();" class="back-btn">Go Back</a>
+
+</body>
+</html>
